@@ -1,0 +1,99 @@
+﻿@model SampleSecureWeb.ViewModel.RegistrationViewModel;
+<div class="row">
+    <div class="col-md-14">
+        <div class="card-header">
+            Registration
+        </div>
+        <div class="card-body">
+            @if(ViewBag.Message != null)
+            {
+                <div class="alert alert-success">
+                    @ViewBag.Message
+                </div>
+            }
+<form asp-action="Register" method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <!-- Username Input -->
+    <div class="form-group">
+        <label asp-for="Username"></label>
+        <input asp-for="Username" class="form-control form-control-user" placeholder="Enter Username" />
+        <span asp-validation-for="Username" class="text-danger"></span>
+    </div>
+
+    <!-- Password Input -->
+    <div class="form-group">
+    <label asp-for="Password"></label>
+    <input asp-for="Password" type="password" class="form-control form-control-user" id="password" placeholder="Enter Password" />
+    <span asp-validation-for="Password" class="text-danger"></span>
+    
+    <!-- Password Strength Meter -->
+    <div class="strength-meter mt-2">
+        <div id="strength-meter-fill" class="strength-meter-fill"></div>
+        </div>
+        <small id="password-strength-text" class="form-text text-muted"></small>
+    </div>
+<style>
+    .strength-meter {
+        height: 10px;
+        width: 100%;
+        background-color: #e0e0e0;
+        border-radius: 3px;
+        margin-top: 10px;
+    }
+    .strength-meter-fill {
+        height: 100%;
+        transition: width 0.2s ease-in-out;
+        border-radius: 3px;
+    }
+    .weak { background-color: #ff4d4d; }
+    .medium { background-color: #ffa500; }
+    .strong { background-color: #4caf50; }
+</style>
+
+
+    <!-- Confirm Password Input -->
+    <div class="form-group">
+        <label asp-for="ConfirmPassword"></label>
+        <input asp-for="ConfirmPassword" type="password" class="form-control form-control-user" placeholder="Confirm Password" />
+        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+    </div>
+
+    <!-- Submit Button -->
+    <button type="submit" class="btn btn-primary btn-user btn-block">Register</button>
+</form>
+
+        </div>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.4.2/zxcvbn.js"></script>
+<script>
+    const passwordInput = document.getElementById('password');
+    const strengthMeter = document.getElementById('strength-meter-fill');
+    const strengthText = document.getElementById('password-strength-text');
+
+    passwordInput.addEventListener('input', function () {
+        const passwordValue = passwordInput.value;
+        const result = zxcvbn(passwordValue); // Use zxcvbn to evaluate password strength
+
+        // Update meter
+        const score = result.score; // score ranges from 0 (weak) to 4 (very strong)
+        strengthMeter.style.width = (score + 1) * 20 + '%'; // Convert score to percentage
+
+        // Update the color and text based on strength
+        if (score === 0) {
+            strengthMeter.className = 'strength-meter-fill weak';
+            strengthText.innerHTML = 'Weak';
+        } else if (score === 2) {
+            strengthMeter.className = 'strength-meter-fill medium';
+            strengthText.innerHTML = 'Medium';
+        } else if (score === 3) {
+            strengthMeter.className = 'strength-meter-fill strong';
+            strengthText.innerHTML = 'Strong';
+        }
+    });
+</script>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
