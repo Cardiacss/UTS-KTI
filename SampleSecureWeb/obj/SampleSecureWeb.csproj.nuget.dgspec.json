@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\KTI\\SampleSecureWeb\\SampleSecureWeb.csproj": {}
+    "D:\\KTI - Copy\\SampleSecureWeb\\SampleSecureWeb.csproj": {}
   },
   "projects": {
-    "D:\\KTI\\SampleSecureWeb\\SampleSecureWeb.csproj": {
+    "D:\\KTI - Copy\\SampleSecureWeb\\SampleSecureWeb.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\KTI\\SampleSecureWeb\\SampleSecureWeb.csproj",
+        "projectUniqueName": "D:\\KTI - Copy\\SampleSecureWeb\\SampleSecureWeb.csproj",
         "projectName": "SampleSecureWeb",
-        "projectPath": "D:\\KTI\\SampleSecureWeb\\SampleSecureWeb.csproj",
+        "projectPath": "D:\\KTI - Copy\\SampleSecureWeb\\SampleSecureWeb.csproj",
         "packagesPath": "C:\\Users\\filbe\\.nuget\\packages\\",
-        "outputPath": "D:\\KTI\\SampleSecureWeb\\obj\\",
+        "outputPath": "D:\\KTI - Copy\\SampleSecureWeb\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\filbe\\AppData\\Roaming\\NuGet\\NuGet.Config"

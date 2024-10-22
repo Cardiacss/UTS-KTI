@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5VHqozLIuNM=",
+  "dgSpecHash": "PVieugOiMwM=",
   "success": true,
-  "projectFilePath": "D:\\KTI\\SampleSecureWeb\\SampleSecureWeb.csproj",
+  "projectFilePath": "D:\\KTI - Copy\\SampleSecureWeb\\SampleSecureWeb.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\filbe\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\filbe\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
