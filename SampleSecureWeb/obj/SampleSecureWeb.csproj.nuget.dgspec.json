@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\KTI\\SampleSecureWeb\\SampleSecureWeb.csproj": {}
+    "D:\\Project KTI\\UTS-KTI\\SampleSecureWeb\\SampleSecureWeb.csproj": {}
   },
   "projects": {
-    "D:\\KTI\\SampleSecureWeb\\SampleSecureWeb.csproj": {
+    "D:\\Project KTI\\UTS-KTI\\SampleSecureWeb\\SampleSecureWeb.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\KTI\\SampleSecureWeb\\SampleSecureWeb.csproj",
+        "projectUniqueName": "D:\\Project KTI\\UTS-KTI\\SampleSecureWeb\\SampleSecureWeb.csproj",
         "projectName": "SampleSecureWeb",
-        "projectPath": "D:\\KTI\\SampleSecureWeb\\SampleSecureWeb.csproj",
-        "packagesPath": "C:\\Users\\filbe\\.nuget\\packages\\",
-        "outputPath": "D:\\KTI\\SampleSecureWeb\\obj\\",
+        "projectPath": "D:\\Project KTI\\UTS-KTI\\SampleSecureWeb\\SampleSecureWeb.csproj",
+        "packagesPath": "C:\\Users\\WinX\\.nuget\\packages\\",
+        "outputPath": "D:\\Project KTI\\UTS-KTI\\SampleSecureWeb\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\filbe\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\WinX\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
