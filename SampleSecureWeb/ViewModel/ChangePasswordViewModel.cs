@@ -11,7 +11,7 @@ public class ChangePasswordViewModel
         [Required(ErrorMessage = "New password is required.")]
         [DataType(DataType.Password)]
         [MinLength(12, ErrorMessage = "The password must be at least 12 characters long.")]
-        [RegularExpression(@"(?=.*[!@#$%^&*(),.?""{}|<>])[A-Za-z\d!@#$%^&*(),.?""{}|<>]{12,}$",ErrorMessage = "The password must have special character")]  
+        [RegularExpression(@"(?=.*[!@#$%^&*(),.?""{}|<>\s])[A-Za-z\d\s!@#$%^&*(),.?""{}|<>]{12,}$", ErrorMessage = "The password must contain at least one special character.")]
         public string NewPassword { get; set; } = string.Empty;
 
         [Required(ErrorMessage = "Please confirm your new password.")]
